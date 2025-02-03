@@ -5,8 +5,9 @@ void ofApp::setup(){
 	std::srand(std::time(0));
 	for (int i = 0; i < 5; i++) 
 	{
-		int n = 10 + std::rand() % 90;
+		int n = std::rand() % 100 + 10;
 		circles.push_back(n);
+		std::cout << " " << n;
 	}
 }
 
@@ -22,8 +23,10 @@ void ofApp::update(){
 void ofApp::draw(){
 	for (int i = 0; i < circles.size(); i++) 
 	{
+		ofSetColor(ofColor::white);
 		ofDrawCircle(100 + i * 200, 200, circles[i]);
-		std::cout << circles[i];
+		ofSetColor(ofColor::black);
+		ofDrawBitmapString(ofToString(circles[i]), 100 + i * 200, 200);
 	}
 }
 
@@ -31,27 +34,34 @@ void ofApp::draw(){
 void ofApp::keyPressed(int key){
 	if (key == 'r') 
 	{
-		;//regenerer nombres et cercles
+		//regenerer nombres et cercles
+		ofApp::setup();
+		ofApp::draw();
 	}
 	else if (key == 'b') 
 	{
-		;//call bubble sort et afficher cercles tries
+		//call bubble sort et afficher cercles tries
+		ofApp::bubbleSort(circles);
 	}
 	else if (key == 'i')
 	{
-		;//call insertion sort et afficher cercles tries
+		//call insertion sort et afficher cercles tries
+		ofApp::insertionSort(circles);
 	}
 	else if (key == 'm')
 	{
-		;//call merge sort et afficher cercles tries
+		//call merge sort et afficher cercles tries
+		//ofApp::mergeSort(circles);
 	}
 	else if (key == 'q')
 	{
-		;//call quick sort et afficher cercles tries
+		//call quick sort et afficher cercles tries
+		//ofApp::quickSort(circles);
 	}
 	else if (key == 's')
 	{
-		;//algorithme Fisher-Yates
+		//algorithme Fisher-Yates
+		ofApp::fisherYatesShuffle(circles);
 	}
 }
 

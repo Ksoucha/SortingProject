@@ -15,7 +15,7 @@ int main( )
 	ofRunMainLoop();
 }
 
-void bubbleSort(std::vector<int>& bubbleArray) 
+void ofApp::bubbleSort(std::vector<int>& bubbleArray)
 {
 	for (size_t i = 0; i < bubbleArray.size(); i++)
 	{
@@ -29,7 +29,7 @@ void bubbleSort(std::vector<int>& bubbleArray)
 	}
 }
 
-void insertionSort(std::vector<int>& insertArray) 
+void ofApp::insertionSort(std::vector<int>& insertArray)
 {
 	for (size_t i = 1; i < insertArray.size(); i++) 
 	{
@@ -44,7 +44,7 @@ void insertionSort(std::vector<int>& insertArray)
 	}
 }
 
-void merge(std::vector<int>& mergeArray, int left, int mid, int right) 
+void merge(std::vector<int>& mergeArray, int left, int mid, int right)
 {
 	std::vector<int> temp;
 	int i = left, j = mid + 1;
@@ -53,12 +53,21 @@ void merge(std::vector<int>& mergeArray, int left, int mid, int right)
 		if (mergeArray[i] <= mergeArray[j]) temp.push_back(mergeArray[i++]);
 		else temp.push_back(mergeArray[j++]);
 	}
-	while (i <= mid) temp.push_back(mergeArray[i++]);
-	while (j <= right) temp.push_back(mergeArray[j++]);
-	for (int k = 0; k < temp.size(); k++) mergeArray[left + k] = temp[k];
+	while (i <= mid)
+	{
+		temp.push_back(mergeArray[i++]);
+	}
+	while (j <= right)
+	{
+		temp.push_back(mergeArray[j++]);
+	}
+	for (int k = 0; k < temp.size(); k++)
+	{
+		mergeArray[left + k] = temp[k];
+	}
 }
 
-void mergeSort(std::vector<int>& mergeArray, int left, int right) 
+void ofApp::mergeSort(std::vector<int>& mergeArray, int left, int right)
 {
 	if (left < right) 
 	{
@@ -69,7 +78,7 @@ void mergeSort(std::vector<int>& mergeArray, int left, int right)
 	}
 }
 
-int partition(std::vector<int>& quickArray, int low, int high) 
+int partition(std::vector<int>& quickArray, int low, int high)
 {
 	int pivot = quickArray[high];
 	int i = low - 1;
@@ -85,7 +94,7 @@ int partition(std::vector<int>& quickArray, int low, int high)
 	return i + 1;
 }
 
-void quickSort(std::vector<int>& quickArray, int low, int high) 
+void ofApp::quickSort(std::vector<int>& quickArray, int low, int high)
 {
 	if (low < high) 
 	{
@@ -95,7 +104,7 @@ void quickSort(std::vector<int>& quickArray, int low, int high)
 	}
 }
 
-void fisherYatesShuffle(std::vector<int>& arrayShuffle) 
+void ofApp::fisherYatesShuffle(std::vector<int>& arrayShuffle)
 {
 	int n = arrayShuffle.size();
 	std::random_device rd; 
