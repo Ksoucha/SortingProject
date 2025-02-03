@@ -17,9 +17,9 @@ int main( )
 
 void ofApp::bubbleSort(std::vector<int>& bubbleArray)
 {
-	for (size_t i = 0; i < bubbleArray.size(); i++)
+	for (int i = 0; i < bubbleArray.size(); i++)
 	{
-		for (size_t j = 0; j < bubbleArray.size() - i - 1; j++)
+		for (int j = 0; j < bubbleArray.size() - i - 1; j++)
 		{
 			if (bubbleArray[j] > bubbleArray[j + 1])
 			{
@@ -31,7 +31,7 @@ void ofApp::bubbleSort(std::vector<int>& bubbleArray)
 
 void ofApp::insertionSort(std::vector<int>& insertArray)
 {
-	for (size_t i = 1; i < insertArray.size(); i++) 
+	for (int i = 1; i < insertArray.size(); i++) 
 	{
 		int key = insertArray[i];
 		int j = i - 1;
@@ -98,9 +98,9 @@ void ofApp::quickSort(std::vector<int>& quickArray, int low, int high)
 {
 	if (low < high) 
 	{
-		int pi = partition(quickArray, low, high);
-		quickSort(quickArray, low, pi - 1);
-		quickSort(quickArray, pi + 1, high);
+		int p = partition(quickArray, low, high);
+		quickSort(quickArray, low, p - 1);
+		quickSort(quickArray, p + 1, high);
 	}
 }
 
@@ -114,11 +114,6 @@ void ofApp::fisherYatesShuffle(std::vector<int>& arrayShuffle)
 	{
 		std::uniform_int_distribution<int> dist(0, i);
 		int j = dist(rng);
-
-		//int temp = arrayShuffle[i];
-		//arrayShuffle[i] = arrayShuffle[j];
-		//arrayShuffle[j] = temp;
-
 		std::swap(arrayShuffle[i], arrayShuffle[j]);
 	}
 }

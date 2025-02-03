@@ -2,10 +2,15 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+	//Remove all elements from circles[]
+	circles.clear();
+
+	//Generate random numbers
+	std::cout << std::endl;
 	std::srand(std::time(0));
 	for (int i = 0; i < 5; i++) 
 	{
-		int n = std::rand() % 100 + 10;
+		int n = std::rand() % 90;
 		circles.push_back(n);
 		std::cout << " " << n;
 	}
@@ -13,10 +18,7 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-	/*if (GetKeyState('A'))
-	{
-
-	}*/
+	
 }
 
 //--------------------------------------------------------------
@@ -51,16 +53,16 @@ void ofApp::keyPressed(int key){
 	else if (key == 'm')
 	{
 		//call merge sort et afficher cercles tries
-		//ofApp::mergeSort(circles);
+		ofApp::mergeSort(circles, 0, circles.size() - 1);
 	}
 	else if (key == 'q')
 	{
 		//call quick sort et afficher cercles tries
-		//ofApp::quickSort(circles);
+		ofApp::quickSort(circles, 0, circles.size() - 1);
 	}
 	else if (key == 's')
 	{
-		//algorithme Fisher-Yates
+		//algorithme Fisher-Yates, shuffle circles[] randomly
 		ofApp::fisherYatesShuffle(circles);
 	}
 }
