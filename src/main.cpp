@@ -95,20 +95,22 @@ void quickSort(std::vector<int>& quickArray, int low, int high)
 	}
 }
 
-void fisherYatesShuffle(std::vector<int>& arr) 
+void fisherYatesShuffle(std::vector<int>& arrayShuffle) 
 {
-	int n = arr.size();
-	std::random_device rd; // Obtain a random seed from hardware
-	std::mt19937 rng(rd()); // Initialize a random number generator
+	int n = arrayShuffle.size();
+	std::random_device rd; 
+	std::mt19937 rng(rd());
 
-	for (int i = n - 1; i > 0; --i) {
-		std::uniform_int_distribution<int> dist(0, i); // Define a random distribution
-		int j = dist(rng); // Generate a random index between 0 and i (inclusive)
+	for (int i = n - 1; i > 0; --i) 
+	{
+		std::uniform_int_distribution<int> dist(0, i);
+		int j = dist(rng);
 
-		// Swap the elements at indices i and j
-		int temp = arr[i];
-		arr[i] = arr[j];
-		arr[j] = temp;
+		//int temp = arrayShuffle[i];
+		//arrayShuffle[i] = arrayShuffle[j];
+		//arrayShuffle[j] = temp;
+
+		std::swap(arrayShuffle[i], arrayShuffle[j]);
 	}
 }
 
