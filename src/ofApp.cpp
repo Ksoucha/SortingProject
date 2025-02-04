@@ -10,7 +10,7 @@ void ofApp::setup(){
 	std::srand(std::time(0));
 	for (int i = 0; i < 5; i++) 
 	{
-		int n = std::rand() % 90;
+		int n = std::rand() % 91 + 10;
 		circles.push_back(n);
 		std::cout << " " << n;
 	}
