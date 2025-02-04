@@ -15,6 +15,8 @@ int main( )
 	ofRunMainLoop();
 }
 
+
+//Code pris de https://daisy-syringa-f15.notion.site/Semaine-4-181b07eabcec8098bca9e80e9b3c669c
 void ofApp::bubbleSort(std::vector<int>& bubbleArray)
 {
 	for (int i = 0; i < bubbleArray.size(); i++)
@@ -29,6 +31,7 @@ void ofApp::bubbleSort(std::vector<int>& bubbleArray)
 	}
 }
 
+//Code pris de https://daisy-syringa-f15.notion.site/Semaine-4-181b07eabcec8098bca9e80e9b3c669c
 void ofApp::insertionSort(std::vector<int>& insertArray)
 {
 	for (int i = 1; i < insertArray.size(); i++) 
@@ -44,6 +47,7 @@ void ofApp::insertionSort(std::vector<int>& insertArray)
 	}
 }
 
+//Code pris de https://daisy-syringa-f15.notion.site/Semaine-4-181b07eabcec8098bca9e80e9b3c669c
 void merge(std::vector<int>& mergeArray, int left, int mid, int right)
 {
 	std::vector<int> temp;
@@ -67,6 +71,7 @@ void merge(std::vector<int>& mergeArray, int left, int mid, int right)
 	}
 }
 
+//Code pris de https://daisy-syringa-f15.notion.site/Semaine-4-181b07eabcec8098bca9e80e9b3c669c
 void ofApp::mergeSort(std::vector<int>& mergeArray, int left, int right)
 {
 	if (left < right) 
@@ -78,6 +83,7 @@ void ofApp::mergeSort(std::vector<int>& mergeArray, int left, int right)
 	}
 }
 
+//Code pris de https://daisy-syringa-f15.notion.site/Semaine-4-181b07eabcec8098bca9e80e9b3c669c
 int partition(std::vector<int>& quickArray, int low, int high)
 {
 	int pivot = quickArray[high];
@@ -94,6 +100,7 @@ int partition(std::vector<int>& quickArray, int low, int high)
 	return i + 1;
 }
 
+//Code pris de https://daisy-syringa-f15.notion.site/Semaine-4-181b07eabcec8098bca9e80e9b3c669c
 void ofApp::quickSort(std::vector<int>& quickArray, int low, int high)
 {
 	if (low < high) 
@@ -104,6 +111,7 @@ void ofApp::quickSort(std::vector<int>& quickArray, int low, int high)
 	}
 }
 
+//Code pris de https://github.com/Kumar-laxmi/Algorithms/blob/main/C%2B%2B/arrays/Fisher_Yates_Shuffle_Algorithm.cpp
 void ofApp::fisherYatesShuffle(std::vector<int>& arrayShuffle)
 {
 	int n = arrayShuffle.size();
