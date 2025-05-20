@@ -1,8 +1,5 @@
 # SortingProject
 
-Projet de Tri dans OpenFrameworks
---
-
 ## **Objective**
 
 This project aims to reinforce the concept of sorting algorithms by implementing and visualizing them in OpenFrameworks. It is an interactive program that demonstrates various sorting techniques with visual feedback.
