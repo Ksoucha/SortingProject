@@ -25,7 +25,3 @@ The program can:
 1. Clone the repository
 2. Navigate to the project folder
 3. Open the file _SortingProject.sln_
-
-## Requirements
-* Visual Studio
-* OpenFrameworks
