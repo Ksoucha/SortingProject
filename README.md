@@ -25,7 +25,7 @@ The program can:
 5. Press **Q** to sort the list using Quick Sort.
 6. Press **S** to shuffle the list using the Fisher-Yates algorithm.
 
-## Steps to run the program (requirements: OpenFrameworks and Visual Studio)
+### Steps to run the program (requirements: OpenFrameworks and Visual Studio)
 1. Clone the repository
 2. Navigate to the project folder
 3. Open the file _SortingProject1.sln_
