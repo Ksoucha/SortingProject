@@ -17,7 +17,7 @@ The program can:
     - Regenerate the list of random numbers.
     - Shuffle the list using the Fisher-Yates Shuffle algorithm.
 
-### Keyboard controls
+## Keyboard controls
 1. Press **R** to generate a new set of random numbers and redraw the circles.
 2. Press **B** to sort the list using Bubble Sort.
 3. Press **I** to sort the list using Insertion Sort.
